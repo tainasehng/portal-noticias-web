@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width,initial-scale-1">
+	<title>Formulário de cadastro de notícias</title>
+</head>
+<body>
+<h1>Adicionar notícias</h1>
+
+	<br/>
+
+	<% if (validacao) { %>
+		<ul>
+			<% for (var i = 0; i < validacao.lenght; i++) {%>
+				<li>
+					<%= validacao[i].msg %>
+				</li>
+			<% } %>
+		</ul>
+	<% } %>
+
+	<form action='/noticias/salvar' method='post'>
+
+	<label>Título</label>
+	<input type='text' id='titulo' name='titulo' value='<%=noticia.titulo%>' placeholder='Título da notícia' />
+
+	<br/>
+
+	<label>Resumo</label>
+	<input type='text' id='resumo' name='resumo' value='<%=noticia.resumo%>' placeholder='Resumo da notícia' />
+
+	<br/>
+
+	<label>Autor da Notícia</label>
+	<input type='text' id='autor' name='autor' value='<%=noticia.autor%>' placeholder='Autor da notícia' />
+
+	<br/>
+
+	<label>Data da Notícia</label>
+	<input type='date' id='data_noticia' name='data_noticia' value='<%=noticia.data_noticia%>' placeholder='Data da notícia' />
+
+	<br/>
+
+	<label>Notícia</label>
+	<textarea id='noticia' name='noticia' rows='5' cols='30'> <%=noticia.titulo%> </textarea>
+
+	<br/>
+
+	<input type='submit' value='Enviar'>
+	</form>
+
+</body>
+</html>
