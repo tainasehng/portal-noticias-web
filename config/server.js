@@ -15,7 +15,7 @@ app.use(expressValidator()); //colocando em execução o expressValidator
 
 consign()
 	.include('app/routes')
-	.then('config/dbConection.js')//incluindo conexão com o banco de dados no consign
+	.then('config/dbConnection.js')//incluindo conexão com o banco de dados no consign
 	.then('app/models')
 	.then('app/controllers')
 	.into(app);
