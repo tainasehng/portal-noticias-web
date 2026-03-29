@@ -106,6 +106,8 @@ npm start
    
 http://localhost:3000
 
+---
+
 ## Demonstração
 
 ### Página Inicial
@@ -142,6 +144,7 @@ Permite editar uma notícia existente, carregando automaticamente os dados previ
 
 <img width="1917" height="1007" alt="image" src="https://github.com/user-attachments/assets/288b5ef1-ef40-4bf4-be03-c897027aa9f1" />
 
+---
 
 ## Aprendizados
 
@@ -154,6 +157,8 @@ Com este projeto, foram praticados:
 - Renderização dinâmica com EJS
 - Organização de código em Node.js
 
+---
+
 ## Melhorias futuras
 
 - Autenticação de usuários
@@ -161,6 +166,8 @@ Com este projeto, foram praticados:
 - Upload de imagens
 - Melhorias no layout (UI/UX)
 - Validação de formulários mais robusta
+
+---
 
 ## Autora
 
