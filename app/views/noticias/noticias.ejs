@@ -15,7 +15,11 @@
 		<%for (var i=0; i<noticias.length; i++) {%>
 		<tr>
 			<td><%=noticias[i].id_noticia%></td>
-			<td><%=noticias[i].titulo%></td>
+			<td>
+			  <a href="/noticia/<%= noticias[i].id_noticia %>">
+			    <%= noticias[i].titulo %>
+			  </a>
+			</td>
 		</tr>
 		<%}%>
 	</table>
