@@ -1,28 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width-device-width,initial-scale-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Portal de notícias</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
+
 <body>
-<h1>Notícias</h1>
-	<table>
-		<tr>
-			<td>ID</td>
-			<td>Título</td>
-		</tr>
-		<%for (var i=0; i<noticias.length; i++) {%>
-		<tr>
-			<td><%=noticias[i].id_noticia%></td>
-			<td>
-			  <a href="/noticia/<%= noticias[i].id_noticia %>">
-			    <%= noticias[i].titulo %>
-			  </a>
-			</td>
-		</tr>
-		<%}%>
-	</table>
+
+	<div class="container">
+
+		<h1 class="text-center">Todas as Notícias</h1>
+		<hr>
+
+		<% if (noticias && noticias.length > 0) { %>
+
+			<div class="row">
+				<% for (var i = 0; i < noticias.length; i++) { %>
+
+					<div class="col-md-6">
+						<div class="panel panel-default">
+							<div class="panel-body">
+
+								<h4>
+									<a href="/noticia/<%= noticias[i].id_noticia %>">
+										<%= noticias[i].titulo %>
+									</a>
+								</h4>
+
+								<p><strong>Autor:</strong> <%= noticias[i].autor %></p>
+								<p><strong>Data:</strong> <%= noticias[i].data_noticia %></p>
+
+								<p>
+									<%= noticias[i].resumo %>
+								</p>
+
+								<a href="/noticia/<%= noticias[i].id_noticia %>" class="btn btn-primary">
+									Ler mais
+								</a>
+
+							</div>
+						</div>
+					</div>
+
+				<% } %>
+			</div>
+
+		<% } else { %>
+
+			<div class="alert alert-warning text-center">
+				Nenhuma notícia cadastrada.
+			</div>
+
+		<% } %>
+
+		<div class="text-center">
+			<a href="/" class="btn btn-default">Voltar para Home</a>
+		</div>
+
+	</div>
 
 </body>
 </html>
