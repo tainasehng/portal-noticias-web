@@ -7,8 +7,7 @@ module.exports.noticias=function(app, req,res){
 
 	var noticiasModel= new NoticiasDAO(connection);
 
-	noticiasModel.getNoticias(connection,function(error,result){
-
+	noticiasModel.getNoticias(function(error,result){
 		if(error){
 			console.log(error);
 		}
