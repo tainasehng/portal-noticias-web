@@ -12,4 +12,8 @@ module.exports=function(app){
 		app.app.controllers.admin.excluir_noticia(app, req, res);
 	});
 
+	app.get('/noticias/editar/:id', function(req, res){
+		app.app.controllers.admin.formulario_edicao_noticia(app, req, res);
+	});
+
 }
