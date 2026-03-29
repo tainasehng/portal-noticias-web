@@ -1,49 +1,99 @@
 # Portal de Notícias
 
-Aplicação web desenvolvida com integração entre front-end, back-end e banco de dados, permitindo a exibição e gerenciamento de notícias.
+Aplicação web desenvolvida com Node.js, Express, EJS e MySQL para exibição e gerenciamento de notícias.
+
+## Objetivo
+
+O projeto foi desenvolvido com o objetivo de praticar conceitos de desenvolvimento web back-end, organização em MVC, integração com banco de dados e renderização de páginas dinâmicas.
 
 ## Funcionalidades
 
-- Exibição de notícias na página inicial  
-- Visualização de notícias individuais  
-- Cadastro de novas notícias  
-- Integração com banco de dados  
-- Organização de rotas e controllers  
+- Exibição das notícias na página inicial
+- Visualização de notícia individual
+- Cadastro de novas notícias
+- Integração com banco de dados MySQL
+- Organização do sistema em rotas, controllers e models
 
-## Tecnologias
+## Tecnologias utilizadas
 
-- Node.js  
-- Express  
-- HTML, CSS e JavaScript  
-- EJS (template engine)  
-- MySQL  
+- Node.js
+- Express
+- EJS
+- MySQL
+- HTML
+- CSS
+- JavaScript
 
 ## Estrutura do projeto
 
-- app/controllers: controle das requisições  
-- app/models: acesso aos dados  
-- app/routes: definição de rotas  
-- app/views: páginas (EJS)  
-- app/public: arquivos estáticos (CSS, imagens, JS)  
-- config: configuração do servidor e banco  
+```bash
+portal-noticias-web/
+│
+├── app/
+│   ├── controllers/
+│   ├── models/
+│   ├── public/
+│   ├── routes/
+│   └── views/
+│
+├── config/
+├── app.js
+├── package.json
+└── README.md
+```
 
 ## Como executar
 
-1. Instale as dependências:
+1. Clone o repositório
+
+```bash
+git clone https://github.com/tainasehng/portal-noticias-web.git
+```
+
+2. Acesse a pasta do projeto
+
+```bash
+cd portal-noticias-web
+```
+
+3. Instale as dependências
 
 ```bash
 npm install
 ```
 
-2. Configure o banco de dados utilizando o arquivo database.sql
+4. Configure o banco de dados
 
-3. Execute o projeto:
+Crie o banco MySQL e importe o arquivo database.sql do projeto.
+
+Depois, configure a conexão com o banco no arquivo correspondente da pasta config.
+
+5. Execute o projeto
 
 ```bash
-node app.js
+npm start
 ```
-
-4. Acesse no navegador:
+   
+6. Acesse no navegador
 
 http://localhost:3000
+
+## Aprendizados
+
+Com este projeto, pratiquei:
+
+- estrutura MVC
+- criação de rotas
+- controllers e models
+- integração com banco de dados MySQL
+- renderização dinâmica com EJS
+- organização de aplicação web em Node.js
+
+## Melhorias futuras
+
+- editar e excluir notícias
+- validação de formulário mais completa
+- melhoria no layout
+- autenticação de usuários
+- paginação de notícias
 
