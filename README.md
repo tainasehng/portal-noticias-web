@@ -110,11 +110,13 @@ http://localhost:3000
 
 ## Demonstração
 
+
 ### Página Inicial
 
 Exibe as principais notícias cadastradas no sistema, com título, resumo, autor e data. Possui navegação para visualizar todas as notícias e acessar o formulário de cadastro.
 
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/72fb02e7-9d9c-47cd-8255-342ef3f8788f" /> 
+
 
 
 ### Lista de Notícias
@@ -124,11 +126,13 @@ Apresenta todas as notícias cadastradas no banco de dados. Permite visualizar d
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/0e0601be-36d2-4726-b1bd-46e45f1205c8" />
 
 
+
 ### Vizualização da Notícia
 
 Exibe o conteúdo completo da notícia selecionada, apresentando título, autor, data, resumo e o texto integral, proporcionando uma visualização detalhada e organizada da informação.
 
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/181ea6b7-6cb9-42ff-94bb-04588feb2ed5" />
+
 
 
 ### Cadastro de Notícia
@@ -138,6 +142,7 @@ Formulário para inserção de novas notícias no sistema, com validação de ca
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/b158f2a8-78e0-4b4a-8afd-64ea6e534dc0" />
 
 
+
 ### Edição de Notícia
 
 Permite editar uma notícia existente, carregando automaticamente os dados previamente cadastrados.
@@ -145,6 +150,7 @@ Permite editar uma notícia existente, carregando automaticamente os dados previ
 <img width="1917" height="1007" alt="image" src="https://github.com/user-attachments/assets/288b5ef1-ef40-4bf4-be03-c897027aa9f1" />
 
 ---
+
 
 ## Aprendizados
 
@@ -172,4 +178,5 @@ Com este projeto, foram praticados:
 ## Autora
 
 Desenvolvido por Tainá Nascimento Sehn Garcia
+
 Estudante de Engenharia de Computação — UFGD
