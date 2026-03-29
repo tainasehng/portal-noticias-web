@@ -30,6 +30,14 @@ function NoticiasDAO(connection){
             callback
         );
     }
+
+    this.atualizarNoticia = function(noticia, callback){
+        connection.query(
+            'update noticias set ? where id_noticia = ?',
+            [noticia, noticia.id_noticia],
+            callback
+        );
+    }
 }
 
 module.exports = NoticiasDAO;
