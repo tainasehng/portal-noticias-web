@@ -20,8 +20,15 @@
 					<h2><%= noticia[0].titulo %></h2>
 					<p><strong>Autor:</strong> <%= noticia[0].autor %></p>
 					<p><strong>Data:</strong> <%= new Date(noticia[0].data_noticia).toLocaleDateString('pt-BR') %></p>
-					<p><strong>Resumo:</strong> <%= noticia[0].resumo %></p>
-					<p><strong>Notícia:</strong> <%= noticia[0].noticia %></p>
+					<h4>Resumo</h4>
+					<p><%= noticia[0].resumo %></p>
+					
+					<hr>
+					
+					<h4>Conteúdo</h4>
+					<p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+						<%= noticia[0].noticia %>
+					</p>
 				</div>
 			</div>
 
