@@ -22,6 +22,14 @@ function NoticiasDAO(connection){
             callback
         );
     }
+
+    this.excluirNoticia = function(id_noticia, callback){
+        connection.query(
+            'delete from noticias where id_noticia = ?',
+            [id_noticia],
+            callback
+        );
+    }
 }
 
 module.exports = NoticiasDAO;
