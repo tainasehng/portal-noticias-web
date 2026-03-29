@@ -1,28 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width-device-width,initial-scale-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Notícia</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
-<h1>Notícia</h1>
-	<% if (noticia.length > 0) { %>
-	  <table>
-	    <tr>
-	      <td>ID</td>
-	      <td>Título</td>
-	      <td>Notícia</td>
-	    </tr>
-	    <tr>
-	      <td><%= noticia[0].id_noticia %></td>
-	      <td><%= noticia[0].titulo %></td>
-	      <td><%= noticia[0].noticia %></td>
-	    </tr>
-	  </table>
-	<% } else { %>
-	  <p>Notícia não encontrada.</p>
-	<% } %>
+
+	<div class="container">
+		<h1 class="text-center">Notícia</h1>
+		<hr>
+
+		<% if (noticia && noticia.length > 0) { %>
+
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<h2><%= noticia[0].titulo %></h2>
+					<p><strong>Autor:</strong> <%= noticia[0].autor %></p>
+					<p><strong>Data:</strong> <%= noticia[0].data_noticia %></p>
+					<p><strong>Resumo:</strong> <%= noticia[0].resumo %></p>
+					<p><strong>Notícia:</strong> <%= noticia[0].noticia %></p>
+				</div>
+			</div>
+
+		<% } else { %>
+
+			<div class="alert alert-warning text-center">
+				Notícia não encontrada.
+			</div>
+
+		<% } %>
+
+		<div class="text-center">
+			<a href="/noticias" class="btn btn-default">Voltar para Notícias</a>
+		</div>
+	</div>
 
 </body>
 </html>
