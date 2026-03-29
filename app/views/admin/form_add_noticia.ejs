@@ -6,7 +6,13 @@
 	<title>Formulário de cadastro de notícias</title>
 </head>
 <body>
-	<h1>Adicionar notícias</h1>
+	<h1>
+	  <% if (noticia.id_noticia) { %>
+	    Editar notícia
+	  <% } else { %>
+	    Adicionar notícia
+	  <% } %>
+	</h1>
 
 	<br/>
 
