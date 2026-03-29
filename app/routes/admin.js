@@ -8,4 +8,8 @@ module.exports=function(app){
 		app.app.controllers.admin.noticias_Salvar(app, req, res);
 	});
 
+	app.get('/noticias/excluir/:id', function(req, res){
+		app.app.controllers.admin.excluir_noticia(app, req, res);
+	});
+
 }
