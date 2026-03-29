@@ -1,28 +1,38 @@
-# Portal de Notícias
+# 📰 Portal de Notícias
 
 Aplicação web desenvolvida com Node.js, Express, EJS e MySQL para exibição e gerenciamento de notícias.
 
+---
+
 ## Objetivo
 
-O projeto foi desenvolvido com o objetivo de praticar conceitos de desenvolvimento web back-end, organização em MVC, integração com banco de dados e renderização de páginas dinâmicas.
+Este projeto foi desenvolvido com o objetivo de praticar conceitos de desenvolvimento web back-end, organização em arquitetura MVC, integração com banco de dados e renderização de páginas dinâmicas.
+
+---
 
 ## Funcionalidades
 
-- Exibição das notícias na página inicial
-- Visualização de notícia individual
-- Cadastro de novas notícias
-- Integração com banco de dados MySQL
-- Organização do sistema em rotas, controllers e models
+- Exibição das notícias na página inicial  
+- Visualização de notícia individual  
+- Cadastro de novas notícias  
+- Edição de notícias  
+- Exclusão de notícias  
+- Integração com banco de dados MySQL  
+- Organização em MVC (Model, View, Controller)
+
+---
 
 ## Tecnologias utilizadas
 
-- Node.js
-- Express
-- EJS
-- MySQL
-- HTML
-- CSS
-- JavaScript
+- Node.js  
+- Express  
+- EJS  
+- MySQL  
+- HTML  
+- CSS  
+- JavaScript  
+
+---
 
 ## Estrutura do projeto
 
@@ -37,7 +47,7 @@ portal-noticias-web/
 │   └── views/
 │
 ├── config/
-│   ├── dbConection.js
+│   ├── dbConnection.js
 │   └── server.js
 │
 ├── app.js
@@ -46,15 +56,17 @@ portal-noticias-web/
 └── README.md
 ```
 
-## Como executar
+---
+
+## Como executar o projeto
 
 1. Clone o repositório
-
+   
 ```bash
 git clone https://github.com/tainasehng/portal-noticias-web.git
 ```
 
-2. Acesse a pasta do projeto
+2. Acesse a pasta
 
 ```bash
 cd portal-noticias-web
@@ -68,36 +80,78 @@ npm install
 
 4. Configure o banco de dados
 
-Crie o banco MySQL e importe o arquivo database.sql do projeto.
+- Crie um banco MySQL chamado:
 
-Depois, configure a conexão com o banco no arquivo correspondente da pasta config.
+```bash
+CREATE DATABASE portal_noticias;
+```
+
+- Importe o arquivo database.sql
+
+- Configure o arquivo:
+
+```bash
+config/dbConnection.js
+```
+
+com seu usuário e senha do MySQL.
 
 5. Execute o projeto
 
 ```bash
 npm start
 ```
-   
-6. Acesse no navegador
 
+6. Acesse no navegador
+   
 http://localhost:3000
+
+## Demonstração
+
+###Página Inicial
+
+Exibe as principais notícias cadastradas no sistema, com título, resumo, autor e data. Possui navegação para visualizar todas as notícias e acessar o formulário de cadastro.
+
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/72fb02e7-9d9c-47cd-8255-342ef3f8788f" /> 
+
+###Lista de Notícias
+
+Apresenta todas as notícias cadastradas no banco de dados. Permite visualizar detalhes, editar ou excluir cada notícia.
+
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/0e0601be-36d2-4726-b1bd-46e45f1205c8" />
+
+###Notícia Individual
+
+
+
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/181ea6b7-6cb9-42ff-94bb-04588feb2ed5" />
+
+###Cadastro de Notícia
+
+Formulário para inserção de novas notícias no sistema, com validação de campos obrigatórios antes do envio.
+
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/b158f2a8-78e0-4b4a-8afd-64ea6e534dc0" />
 
 ## Aprendizados
 
-Com este projeto, pratiquei:
+Com este projeto, foram praticados:
 
-- estrutura MVC
-- criação de rotas
-- controllers e models
-- integração com banco de dados MySQL
-- renderização dinâmica com EJS
-- organização de aplicação web em Node.js
+- Estrutura MVC em aplicações web
+- Criação de rotas com Express
+- Integração com banco de dados MySQL
+- Operações CRUD (Create, Read, Update, Delete)
+- Renderização dinâmica com EJS
+- Organização de código em Node.js
 
 ## Melhorias futuras
 
-- editar e excluir notícias
-- validação de formulário mais completa
-- melhoria no layout
-- autenticação de usuários
-- paginação de notícias
+- Autenticação de usuários
+- Paginação de notícias
+- Upload de imagens
+- Melhorias no layout (UI/UX)
+- Validação de formulários mais robusta
 
+## Autora
+
+Desenvolvido por Tainá Nascimento Sehn Garcia
+Estudante de Engenharia de Computação — UFGD
