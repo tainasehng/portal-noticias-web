@@ -34,3 +34,19 @@ module.exports.noticias_Salvar = function(app, req, res){
 		res.redirect('/noticias');
 	});
 }
+
+module.exports.excluir_noticia = function(app, req, res){
+
+	var id_noticia = req.params.id;
+
+	var connection = app.config.dbConnection();
+	var noticiasModel = new NoticiasDAO(connection);
+
+	noticiasModel.excluirNoticia(id_noticia, function(error, result){
+		if(error){
+			console.log(error);
+		}
+
+		res.redirect('/noticias');
+	});
+}
