@@ -17,13 +17,22 @@ module.exports.noticias=function(app, req,res){
 	});
 }
 
-module.exports.noticia=function(app, req,res){
+module.exports.noticia = function(app, req, res){
 
-	var connection = app.config.dbConection();
+    var connection = app.config.dbConection();
 
-	var noticiasModel= new NoticiasDAO(connection);
+    var noticiasModel = new NoticiasDAO(connection);
 
-	noticiasModel.getNoticia(connection, function(error, result){
-		res.render('noticias/noticia.ejs', {noticia:result});
-	});
+    var id_noticia = req.params.id;
+
+    noticiasModel.getNoticia(id_noticia, function(error, result){
+
+        if(error){
+            console.log(error);
+        }
+
+        res.render('noticias/noticia.ejs', {noticia: result});
+
+    });
+
 }
