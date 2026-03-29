@@ -28,6 +28,7 @@ module.exports.noticia = function(app, req, res){
 
         if(error){
             console.log(error);
+            return res.render('noticias/noticia.ejs', {noticia: []});
         }
 
         res.render('noticias/noticia.ejs', {noticia: result});
