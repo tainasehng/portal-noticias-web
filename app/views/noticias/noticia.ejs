@@ -15,16 +15,16 @@
 
 		<% if (noticia && noticia.length > 0) { %>
 
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<h2><%= noticia[0].titulo %></h2>
+			<div class="panel panel-default" style="box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-radius: 8px;">
+				<div class="panel-body" style="padding: 30px;">
+					<h2 style="margin-top: 0; font-weight: bold;"><%= noticia[0].titulo %></h2>
 					<p><strong>Autor:</strong> <%= noticia[0].autor %></p>
 					<p><strong>Data:</strong> <%= new Date(noticia[0].data_noticia).toLocaleDateString('pt-BR') %></p>
 					<h4>Resumo</h4>
 					<p><%= noticia[0].resumo %></p>
-					
+
 					<hr>
-					
+
 					<h4>Conteúdo</h4>
 					<p style="text-align: justify; font-size: 16px; line-height: 1.6;">
 						<%= noticia[0].noticia %>
