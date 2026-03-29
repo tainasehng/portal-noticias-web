@@ -31,7 +31,7 @@
 								</h4>
 
 								<p><strong>Autor:</strong> <%= noticias[i].autor %></p>
-								<p><strong>Data:</strong> <%= noticias[i].data_noticia %></p>
+								<p><strong>Data:</strong> <%= new Date(noticias[i].data_noticia).toLocaleDateString('pt-BR') %></p>
 
 								<p>
 									<%= noticias[i].resumo %>
