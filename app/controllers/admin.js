@@ -50,3 +50,20 @@ module.exports.excluir_noticia = function(app, req, res){
 		res.redirect('/noticias');
 	});
 }
+
+module.exports.formulario_edicao_noticia = function(app, req, res){
+
+	var id_noticia = req.params.id;
+
+	var connection = app.config.dbConnection();
+	var noticiasModel = new NoticiasDAO(connection);
+
+	noticiasModel.getNoticia(id_noticia, function(error, result){
+		if(error){
+			console.log(error);
+			return res.redirect('/noticias');
+		}
+
+		res.render('admin/form_add_noticia.ejs', { validacao: [], noticia: result[0] });
+	});
+}
