@@ -2,7 +2,7 @@ var NoticiasDAO=require('../models/NoticiasDAO');
 
 module.exports.noticias=function(app, req,res){
 
-	var connection = app.config.dbConection();
+	var connection = app.config.dbConnection();
 	//agora recebemos o app por parâmetro
 
 	var noticiasModel= new NoticiasDAO(connection);
@@ -19,7 +19,7 @@ module.exports.noticias=function(app, req,res){
 
 module.exports.noticia = function(app, req, res){
 
-    var connection = app.config.dbConection();
+    var connection = app.config.dbConnection();
 
     var noticiasModel = new NoticiasDAO(connection);
 
