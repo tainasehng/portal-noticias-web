@@ -52,7 +52,7 @@
 		    				<a href="/noticia/<%= noticias[0].id_noticia %>" class="noticia_titulo">
 		    					<%= noticias[0].titulo %>
 		    				</a>
-		    				<span class="noticia_data"><%= noticias[0].data_noticia %></span>
+		    				<span class="noticia_data"><%= noticias[0].data_noticia.toLocaleDateString('pt-BR') %></span>
 		    				<br />
 		    				<p class="noticia_resumo">
 		    					<%= noticias[0].resumo %>
