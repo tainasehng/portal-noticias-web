@@ -37,7 +37,11 @@ portal-noticias-web/
 │   └── views/
 │
 ├── config/
+│   ├── dbConection.js
+│   └── server.js
+│
 ├── app.js
+├── database.sql
 ├── package.json
 └── README.md
 ```
